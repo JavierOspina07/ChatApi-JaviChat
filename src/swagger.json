@@ -1,0 +1,829 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+<<<<<<< HEAD
+    "title": "Chat API",
+    "description": "A little whatsapp api clone...",
+    "version": "1.0.0"
+=======
+    "title": "chat-API",
+    "description": "...",
+    "version": "1.0"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+  },
+  "paths": {
+    "/api/v1/users": {
+      "post": {
+<<<<<<< HEAD
+        "tags": [
+          "user"
+        ],
+=======
+        "tags": ["users"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "summary": "register",
+        "operationId": "register",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/registerrequest"
+                  },
+                  {
+                    "example": {
+<<<<<<< HEAD
+                      "firstname": "Estela",
+                      "lastname": "Velazquez",
+                      "email": "estela@hotmail.com",
+                      "password": "Academlo123%"
+=======
+                      "firstname": "Siria",
+                      "lastname": "JImenez",
+                      "email": "siria@gmail.com",
+                      "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                    }
+                  }
+                ]
+              },
+              "example": {
+<<<<<<< HEAD
+                "firstname": "Estela",
+                "lastname": "Velazquez",
+                "email": "estela@hotmail.com",
+                "password": "Academlo123%"
+=======
+                "firstname": "Siria",
+                "lastname": "JImenez",
+                "email": "siria@gmail.com",
+                "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      },
+      "get": {
+<<<<<<< HEAD
+        "tags": [
+          "user"
+        ],
+        "summary": "getAllUsers",
+        "operationId": "getAllUsers",
+=======
+        "tags": ["users"],
+        "summary": "get all users",
+        "operationId": "getallusers",
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/users/login": {
+      "post": {
+<<<<<<< HEAD
+        "tags": [
+          "user"
+        ],
+=======
+        "tags": ["users"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "summary": "login user",
+        "operationId": "loginuser",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/loginuserrequest"
+                  },
+                  {
+                    "example": {
+<<<<<<< HEAD
+                      "email": "fany_garcia13@hotmail.com",
+                      "password": "Academlo123%"
+=======
+                      "email": "ian.rosasmal@gmail.com",
+                      "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                    }
+                  }
+                ]
+              },
+              "example": {
+<<<<<<< HEAD
+                "email": "fany_garcia13@hotmail.com",
+                "password": "Academlo123%"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/users": {
+      "get": {
+        "tags": [
+          "user"
+        ],
+        "summary": "example",
+        "operationId": "example",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+    },
+    "/reverify-email": {
+      "post": {
+        "tags": [
+          "user"
+        ],
+        "summary": "reverify-email",
+        "operationId": "reverify-email",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/reverify-email-request"
+                  },
+                  {
+                    "example": {
+                      "email": "garcia_ce@outlook.com",
+                      "firstname": "Fany",
+                      "lastname": "Gar"
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "email": "garcia_ce@outlook.com",
+                "firstname": "Fany",
+                "lastname": "Gar"
+=======
+                "email": "ian.rosasmal@gmail.com",
+                "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/conversations": {
+      "post": {
+<<<<<<< HEAD
+        "tags": [
+          "conversations"
+        ],
+=======
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": ["conversations"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "summary": "create conversation",
+        "operationId": "createconversation",
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+                    "$ref": "#/components/schemas/createconversationrequest"
+                  },
+                  {
+                    "example": {
+                      "userId": 1,
+<<<<<<< HEAD
+                      "participantId": 1
+=======
+                      "participantId": 2
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "userId": 1,
+<<<<<<< HEAD
+                "participantId": 1
+=======
+                "participantId": 2
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/conversations/group": {
+      "post": {
+<<<<<<< HEAD
+        "tags": [
+          "conversations"
+        ],
+        "summary": "conversation group",
+        "operationId": "conversationgroup",
+=======
+        "security": [
+          {
+            "bearer": []
+          }
+        ],
+        "tags": ["conversations"],
+        "summary": "create group conversation",
+        "operationId": "creategroupconversation",
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "parameters": [],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+<<<<<<< HEAD
+                    "$ref": "#/components/schemas/conversationgrouprequest"
+=======
+                    "$ref": "#/components/schemas/creategroupconversationrequest"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                  },
+                  {
+                    "example": {
+                      "userId": 1,
+<<<<<<< HEAD
+                      "participantsIds": [
+                        3,
+                        4,
+                        5
+                      ],
+                      "title": "chatNode"
+=======
+                      "participantsIds": [3, 4, 5],
+                      "title": "Parangaricutirimicuaro"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                    }
+                  }
+                ]
+              },
+              "example": {
+                "userId": 1,
+<<<<<<< HEAD
+                "participantsIds": [
+                  3,
+                  4,
+                  5
+                ],
+                "title": "chatNode"
+=======
+                "participantsIds": [3, 4, 5],
+                "title": "Parangaricutirimicuaro"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false
+      }
+    },
+    "/api/v1/conversations/{id}": {
+      "get": {
+<<<<<<< HEAD
+        "tags": [
+          "conversations"
+        ],
+        "summary": "get all conversations",
+        "operationId": "getallconversations",
+=======
+        "tags": ["conversations"],
+        "summary": "get all conversations by user",
+        "operationId": "getallconversationsbyuser",
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 1
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+<<<<<<< HEAD
+        "deprecated": false
+=======
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+      }
+    },
+    "/api/v1/messages/conversation/{id}": {
+      "post": {
+<<<<<<< HEAD
+        "tags": [
+          "message"
+        ],
+        "summary": "getConversation",
+        "operationId": "getConversation",
+=======
+        "tags": ["messages"],
+        "summary": "create new message",
+        "operationId": "createnewmessage",
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+<<<<<<< HEAD
+              "example": 7
+=======
+              "example": 10
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "",
+          "content": {
+            "application/json": {
+              "schema": {
+                "allOf": [
+                  {
+<<<<<<< HEAD
+                    "$ref": "#/components/schemas/getConversationRequest"
+                  },
+                  {
+                    "example": {
+                      "content": "como estan?",
+                      "senderId": 5
+=======
+                    "$ref": "#/components/schemas/createnewmessagerequest"
+                  },
+                  {
+                    "example": {
+                      "content": "que te importa",
+                      "senderId": 6
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+                    }
+                  }
+                ]
+              },
+              "example": {
+<<<<<<< HEAD
+                "content": "como estan?",
+                "senderId": 5
+=======
+                "content": "que te importa",
+                "senderId": 6
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      },
+      "get": {
+<<<<<<< HEAD
+        "tags": [
+          "message"
+        ],
+        "summary": "get conversation message",
+        "operationId": "getconversationmessage",
+=======
+        "tags": ["messages"],
+        "summary": "get conversation messages",
+        "operationId": "getconversationmessages",
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+<<<<<<< HEAD
+              "example": 1
+=======
+              "example": 10
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+<<<<<<< HEAD
+    },
+    "/api/v1/users/{id}": {
+      "put": {
+        "tags": [
+          "Misc"
+        ],
+        "summary": "test-upload",
+        "operationId": "test-upload",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "style": "simple",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "example": 1
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "encoding": {},
+              "schema": {
+                "required": [
+                  "avatar"
+                ],
+                "type": "object",
+                "properties": {
+                  "avatar": {
+                    "type": "string",
+                    "format": "binary"
+                  }
+                }
+              }
+            }
+          },
+          "required": false
+        },
+        "responses": {
+          "200": {
+            "description": "",
+            "headers": {}
+          }
+        },
+        "deprecated": false,
+        "security": [
+          {
+            "bearer": []
+          }
+        ]
+      }
+=======
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+    }
+  },
+  "components": {
+    "schemas": {
+      "registerrequest": {
+        "title": "registerrequest",
+<<<<<<< HEAD
+        "required": [
+          "firstname",
+          "lastname",
+          "email",
+          "password"
+        ],
+=======
+        "required": ["firstname", "lastname", "email", "password"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "type": "object",
+        "properties": {
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+<<<<<<< HEAD
+          "firstname": "Estela",
+          "lastname": "Velazquez",
+          "email": "estela@hotmail.com",
+          "password": "Academlo123%"
+=======
+          "firstname": "Siria",
+          "lastname": "JImenez",
+          "email": "siria@gmail.com",
+          "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        }
+      },
+      "loginuserrequest": {
+        "title": "loginuserrequest",
+<<<<<<< HEAD
+        "required": [
+          "email",
+          "password"
+        ],
+=======
+        "required": ["email", "password"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          }
+        },
+        "example": {
+<<<<<<< HEAD
+          "email": "fany_garcia13@hotmail.com",
+          "password": "Academlo123%"
+        }
+      },
+      "reverify-email-request": {
+        "title": "reverify-email-request",
+        "required": [
+          "email",
+          "firstname",
+          "lastname"
+        ],
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string"
+          },
+          "firstname": {
+            "type": "string"
+          },
+          "lastname": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "email": "garcia_ce@outlook.com",
+          "firstname": "Fany",
+          "lastname": "Gar"
+=======
+          "email": "ian.rosasmal@gmail.com",
+          "password": "Academlo123@"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        }
+      },
+      "createconversationrequest": {
+        "title": "createconversationrequest",
+<<<<<<< HEAD
+        "required": [
+          "userId",
+          "participantId"
+        ],
+=======
+        "required": ["userId", "participantId"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "participantId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+          "userId": 1,
+<<<<<<< HEAD
+          "participantId": 1
+        }
+      },
+      "conversationgrouprequest": {
+        "title": "conversationgrouprequest",
+        "required": [
+          "userId",
+          "participantsIds",
+          "title"
+        ],
+=======
+          "participantId": 2
+        }
+      },
+      "creategroupconversationrequest": {
+        "title": "creategroupconversationrequest",
+        "required": ["userId", "participantsIds", "title"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "type": "object",
+        "properties": {
+          "userId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "participantsIds": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "description": ""
+          },
+          "title": {
+            "type": "string"
+          }
+        },
+        "example": {
+          "userId": 1,
+<<<<<<< HEAD
+          "participantsIds": [
+            3,
+            4,
+            5
+          ],
+          "title": "chatNode"
+        }
+      },
+      "getConversationRequest": {
+        "title": "getConversationRequest",
+        "required": [
+          "content",
+          "senderId"
+        ],
+=======
+          "participantsIds": [3, 4, 5],
+          "title": "Parangaricutirimicuaro"
+        }
+      },
+      "createnewmessagerequest": {
+        "title": "createnewmessagerequest",
+        "required": ["content", "senderId"],
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "senderId": {
+            "type": "integer",
+            "format": "int32"
+          }
+        },
+        "example": {
+<<<<<<< HEAD
+          "content": "como estan?",
+          "senderId": 5
+=======
+          "content": "que te importa",
+          "senderId": 6
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+        }
+      }
+    },
+    "securitySchemes": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [],
+  "tags": [
+    {
+<<<<<<< HEAD
+      "name": "user"
+=======
+      "name": "users"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+    },
+    {
+      "name": "conversations"
+    },
+    {
+<<<<<<< HEAD
+      "name": "message"
+    },
+    {
+      "name": "Misc",
+      "description": ""
+=======
+      "name": "messages"
+>>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
+    }
+  ]
+}
