@@ -1,24 +1,12 @@
 // importamos las clases de errores de sequelize
-<<<<<<< HEAD
 const fs = require('node:fs/promises')
 const path = require('node:path')
 const { ConnectionError, ValidationError, DatabaseError } = require('sequelize')
 const dayjs = require('dayjs')
-=======
-const fs = require("node:fs/promises");
-const path = require("node:path");
-const {
-  ConnectionError,
-  ValidationError,
-  DatabaseError,
-} = require("sequelize");
-const dayjs = require("dayjs");
->>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
 
 // necesitamos un middleware para mostrar errores en la consola (log errors)
 
 const getError = (req, err, res) => {
-<<<<<<< HEAD
   const { body, url, method } = req
   console.log(body)
   const formatBody = body ? JSON.stringify(body) : null
@@ -39,31 +27,6 @@ const errorLogger = (err, req, res, next) => {
   fs.appendFile(filePath, getError(req, err, res))
   next(err)
 }
-=======
-  const { body, url, method } = req;
-  console.log(body);
-  const formatBody = body ? JSON.stringify(body) : null;
-  const { status, ...error } = err;
-  return (
-    `req: ${method} ${url} body: ${formatBody} \nres: status: ${status}, ${JSON.stringify(
-      error
-    )} ` + "\n\n"
-  );
-};
-
-const errorLogger = (err, req, res, next) => {
-  const date = new Date().toLocaleString();
-  const current = dayjs().format("YYYY-MM-DD");
-  console.log(err); // mostrar la fecha y hora en la que sucedio el error
-  const filePath = path.join(__dirname, `../logs/${current}-logs.txt`);
-  fs.appendFile(
-    filePath,
-    `====================ERROR ${date}=========================\n`
-  );
-  fs.appendFile(filePath, getError(req, err, res));
-  next(err);
-};
->>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
 
 const ormErrorHandler = (err, req, res, next) => {
   // aqui llega un error lanzado en un controlador
@@ -105,18 +68,6 @@ const jwtErrorHandler = (err, req, res, next) => {
   }
   next(err)
 }
-
-const jwtErrorHandler = (err, req, res, next) => {
-  const jwtErrors = ["TokenExpiredError", "JsonWebTokenError"];
-
-  if (jwtErrors.includes(err.name)) {
-    return res.status(401).json({
-      error: err.name,
-      message: err.message,
-    });
-  }
-  next(err);
-};
 
 // error
 // {status, error, message}

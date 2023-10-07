@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 const { check } = require('express-validator')
 const validateResult = require('../../middlewares/validator.middleware')
-=======
-const { check } = require("express-validator");
-const validateResult = require("../../middlewares/validator.middleware");
->>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
 
 const registerUserValidator = [
   check('firstname', 'Error con firstname')

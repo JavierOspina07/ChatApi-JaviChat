@@ -26,11 +26,7 @@ const sendWelcomeEmail = async (email, data) => {
     ...data,
     token,
     url: process.env.FRONT_URL,
-<<<<<<< HEAD
   })
-=======
-  });
->>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
 
   const attachments = await getImages('/views/welcome/images')
 

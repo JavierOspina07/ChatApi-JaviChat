@@ -9,21 +9,12 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-<<<<<<< HEAD
       Conversation.hasMany(models.Message, { foreignKey: 'conversationId' })
       Conversation.belongsTo(models.User, { foreignKey: 'createdBy' })
       Conversation.belongsToMany(models.User, { through: 'Participant' })
       Conversation.hasMany(models.Participant, {
         foreignKey: 'ConversationId',
       })
-=======
-      Conversation.hasMany(models.Message, { foreignKey: "conversationId" });
-      Conversation.belongsTo(models.User, { foreignKey: "createdBy" });
-      Conversation.belongsToMany(models.User, { through: "Participant" });
-      Conversation.hasMany(models.Participant, {
-        foreignKey: "ConversationId",
-      });
->>>>>>> fcc5275e6a8156e8eda245fa6518585950c98653
     }
   }
   Conversation.init(
